@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --Primary-Moderblue: hsl(238, 40%, 52%);
+  --Primary-SoftRed: hsl(358, 79%, 66%);
+  --Primary-LGBlue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+  --Neutral-DBlue: hsl(212, 24%, 26%);
+  --Neutral-GBlue: hsl(211, 10%, 45%);
+  --Neutral-LGray: hsl(223, 19%, 93%);
+  --Neutral-VlGray: hsl(228, 33%, 97%);
+  --Neutral-White: hsl(0, 0%, 100%); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: var(--Neutral-LGray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px; }
+  body .container {
+    margin-top: 1em;
+    width: 40em;
+    height: auto; }
+    body .container .comments {
+      background-color: var(--Neutral-White);
+      display: flex;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      padding: 1.5em;
+      position: relative; }
+      body .container .comments .score {
+        background-color: var(--Neutral-LGray);
+        border-radius: 10px;
+        width: 15%;
+        height: 80%;
+        margin-right: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
+        body .container .comments .score .plus-icon {
+          background-image: url("images/icon-plus.svg");
+          width: 2em;
+          height: 2em;
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer; }
+        body .container .comments .score p {
+          color: var(--Primary-Moderblue);
+          font-weight: 500; }
+        body .container .comments .score .minus-icon {
+          background-image: url("images/icon-minus.svg");
+          width: 2em;
+          height: 2em;
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer; }
+      body .container .comments .info {
+        display: flex;
+        flex-wrap: wrap; }
+        body .container .comments .info .user {
+          display: flex;
+          align-items: center;
+          width: 25%;
+          height: 30%; }
+          body .container .comments .info .user .user-icon {
+            background-image: url("images/avatars/image-amyrobson.png");
+            width: 2em;
+            height: 2em;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            background-position: center; }
+          body .container .comments .info .user p {
+            padding-left: 1em;
+            font-weight: 500; }
+        body .container .comments .info .createdAt {
+          width: 20%;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          color: var(--Neutral-GBlue);
+          padding-left: 0.5em; }
+        body .container .comments .info .reply {
+          width: 55%;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          color: var(--Primary-Moderblue);
+          font-weight: 500;
+          cursor: pointer; }
+          body .container .comments .info .reply .reply-icon {
+            background-image: url("images/icon-reply.svg");
+            width: 1em;
+            height: 1em;
+            background-repeat: no-repeat;
+            margin-right: .5em; }
+        body .container .comments .info .content {
+          width: 100%;
+          height: 70%;
+          color: var(--Neutral-GBlue);
+          padding-top: .5em; }
+    body .container .replies {
+      position: absolute;
+      background-color: var(--Neutral-White);
+      display: flex;
+      width: 34em;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      padding: 1.5em;
+      left: 1em;
+      margin-left: 5em; }
+      body .container .replies .info .user {
+        width: 30%; }
+      body .container .replies .info .createdAt {
+        width: 25%; }
+      body .container .replies .info .reply {
+        width: 45%; }
+
+/*# sourceMappingURL=style.css.map */

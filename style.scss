@@ -31,7 +31,7 @@ body{
       width: 40em;
       height: auto;
       
-      .comments{
+      .card{
          background-color: var(--Neutral-White);
          display: flex;
          width: 100%;
@@ -77,7 +77,7 @@ body{
             .user{
                display: flex;
                align-items: center;
-               width: 25%;
+               width: 35%;
                height: 30%;
                .user-icon{
                   background-image: url('images/avatars/image-amyrobson.png');
@@ -88,34 +88,64 @@ body{
                   background-position:center;
                   background-size: contain;
                }
-               p{
+               .user-name{
                   padding-left: 1em;
                   font-weight: 500;
                }
+               .you{
+                  background-color: var(--Primary-Moderblue);
+                  color: var(--Neutral-White);
+                  font-weight: 500;
+                  margin: 0em .5em;
+               }
             }
             .createdAt{
-               width: 20%;
+               width: auto;
                height: 30%;
                display: flex;
                align-items: center;
                color: var(--Neutral-GBlue);
-               padding-left: .5em
             }
-            .reply{
-               width: 55%;
-               height: 30%;
+            .options{
+               height: 35%;
                display: flex;
                align-items: center;
                justify-content: end;
-               color: var(--Primary-Moderblue);
                font-weight: 500;
                cursor: pointer;
+            }
+            .reply{
+               width:45%;
+               color: var(--Primary-Moderblue);
                .reply-icon{
                   background-image: url('images/icon-reply.svg');
                   width: 1em;
                   height: 1em;
                   background-repeat: no-repeat;
                   margin-right: .5em;
+               }
+            }
+            .delete{
+               width:30%;
+               color: var(--Primary-SoftRed);
+               .delete-icon{
+                  background-image: url('images/icon-delete.svg');
+                  width: 1em;
+                  height: 1em;
+                  background-repeat: no-repeat;
+                  margin-right: .5em;
+               }
+            }
+            .edit{
+               width:15%;
+               color: var(--Primary-Moderblue);
+               .edit-icon{
+                  background-image: url('images/icon-edit.svg');
+                  width: 1em;
+                  height: 1em;
+                  background-repeat: no-repeat;
+                  margin-right: .5em;
+                  
                }
             }
             .content{
@@ -128,12 +158,14 @@ body{
       }
       .comment-details{
          background-color: var(--Neutral-White);
+         border-color: var(--Neutral-VlGray);
          display: flex;
          width: 100%;
          height: 8em;
          border-radius: 5px;
          padding: 1em;
          justify-content:flex-start;
+         margin-bottom: 1em;
          .current-user-pic{
             width: 2em;
             height: 2em;
@@ -144,7 +176,7 @@ body{
             width: 32em;
             height: 6em;
             padding: .5em;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 16px;
             font-family: 'Rubik', sans-serif;
          }
@@ -160,5 +192,10 @@ body{
             box-shadow: transparent;
          }
       }
+      .all-comments:not(:first-child){
+         margin-left: 4.5rem;
+      }
    }
 }
+
+

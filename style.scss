@@ -72,88 +72,101 @@ body{
          }
          .info{
             display: flex;
-            flex-wrap: wrap;
-            
-            .user{
-               display: flex;
-               align-items: center;
-               width: 35%;
-               height: 30%;
-               .user-icon{
-                  background-image: url('images/avatars/image-amyrobson.png');
-                  width: 2em;
-                  height: 2em;
-                  background-repeat: no-repeat;
-                  border-radius: 50px;
-                  background-position:center;
-                  background-size: contain;
-               }
-               .user-name{
-                  padding-left: 1em;
-                  font-weight: 500;
-               }
-               .you{
-                  background-color: var(--Primary-Moderblue);
-                  color: var(--Neutral-White);
-                  font-weight: 500;
-                  margin: 0em .5em;
-               }
-            }
-            .createdAt{
-               width: auto;
-               height: 30%;
-               display: flex;
-               align-items: center;
-               color: var(--Neutral-GBlue);
-            }
-            .options{
-               height: 35%;
-               display: flex;
-               align-items: center;
-               justify-content: end;
-               font-weight: 500;
-               cursor: pointer;
-            }
-            .reply{
-               width:45%;
-               color: var(--Primary-Moderblue);
-               .reply-icon{
-                  background-image: url('images/icon-reply.svg');
-                  width: 1em;
-                  height: 1em;
-                  background-repeat: no-repeat;
-                  margin-right: .5em;
-               }
-            }
-            .delete{
-               width:30%;
-               color: var(--Primary-SoftRed);
-               .delete-icon{
-                  background-image: url('images/icon-delete.svg');
-                  width: 1em;
-                  height: 1em;
-                  background-repeat: no-repeat;
-                  margin-right: .5em;
-               }
-            }
-            .edit{
-               width:15%;
-               color: var(--Primary-Moderblue);
-               .edit-icon{
-                  background-image: url('images/icon-edit.svg');
-                  width: 1em;
-                  height: 1em;
-                  background-repeat: no-repeat;
-                  margin-right: .5em;
-                  
-               }
-            }
-            .content{
+            flex-direction: column;
+            border: 1px solid black;
+            .upper{
                width: 100%;
-               height: 70%;
-               color: var(--Neutral-GBlue);
-               padding-top: .5em;
+               display: flex;
+               border: 1px solid black;   
+               .user{
+                  display: flex;
+                  align-items: center;
+                  width: auto;
+                  height: 30%;
+                  margin-right: .5em;
+                  .user-icon{
+                     background-image: url('images/avatars/image-amyrobson.png');
+                     width: 2em;
+                     height: 2em;
+                     background-repeat: no-repeat;
+                     border-radius: 50px;
+                     background-position:center;
+                     background-size: contain;
+                  }
+                  .user-name{
+                     padding-left: 1em;
+                     font-weight: 500;
+                  }
+                  .you{
+                     background-color: var(--Primary-Moderblue);
+                     color: var(--Neutral-White);
+                     font-weight: 500;
+                     margin-left: .5em;
+                  }
+               }
+               .createdAt{
+                  width: auto;
+                  height: 30%;
+                  display: flex;
+                  align-items: center;
+                  color: var(--Neutral-GBlue);
+               }
+               .options{
+                  border: 1px solid black;
+                  width: 100%;
+                  height: 35%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-end;
+                  font-weight: 500;
+                  cursor: pointer;
+               }
+               .reply{
+                  width:auto;
+                  color: var(--Primary-Moderblue);
+                  .reply-icon{
+                     background-image: url('images/icon-reply.svg');
+                     width: 1em;
+                     height: 1em;
+                     background-repeat: no-repeat;
+                     margin-right: .5em;
+                  }
+               }
+               .delete{
+                  width:auto;
+                  color: var(--Primary-SoftRed);
+                  .delete-icon{
+                     background-image: url('images/icon-delete.svg');
+                     width: 1em;
+                     height: 1em;
+                     background-repeat: no-repeat;
+                     margin-right: .5em;
+                  }
+               }
+               .edit{
+                  width:auto;
+                  color: var(--Primary-Moderblue);
+                  .edit-icon{
+                     background-image: url('images/icon-edit.svg');
+                     width: 1em;
+                     height: 1em;
+                     background-repeat: no-repeat;
+                     margin-right: .5em;
+                     
+                  }
+               }
             }
+            .lower{
+               width: 100%;
+               .content{
+                  width: 100%;
+                  height: 70%;
+                  color: var(--Neutral-GBlue);
+                  padding-top: .5em;
+               }
+            }
+            
+            
          }
       }
       .comment-details{

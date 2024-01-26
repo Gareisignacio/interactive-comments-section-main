@@ -64,73 +64,83 @@ body {
           cursor: pointer; }
       body .container .card .info {
         display: flex;
-        flex-wrap: wrap; }
-        body .container .card .info .user {
-          display: flex;
-          align-items: center;
-          width: 35%;
-          height: 30%; }
-          body .container .card .info .user .user-icon {
-            background-image: url("images/avatars/image-amyrobson.png");
-            width: 2em;
-            height: 2em;
-            background-repeat: no-repeat;
-            border-radius: 50px;
-            background-position: center;
-            background-size: contain; }
-          body .container .card .info .user .user-name {
-            padding-left: 1em;
-            font-weight: 500; }
-          body .container .card .info .user .you {
-            background-color: var(--Primary-Moderblue);
-            color: var(--Neutral-White);
-            font-weight: 500;
-            margin: 0em .5em; }
-        body .container .card .info .createdAt {
-          width: auto;
-          height: 30%;
-          display: flex;
-          align-items: center;
-          color: var(--Neutral-GBlue); }
-        body .container .card .info .options {
-          height: 35%;
-          display: flex;
-          align-items: center;
-          justify-content: end;
-          font-weight: 500;
-          cursor: pointer; }
-        body .container .card .info .reply {
-          width: 45%;
-          color: var(--Primary-Moderblue); }
-          body .container .card .info .reply .reply-icon {
-            background-image: url("images/icon-reply.svg");
-            width: 1em;
-            height: 1em;
-            background-repeat: no-repeat;
-            margin-right: .5em; }
-        body .container .card .info .delete {
-          width: 30%;
-          color: var(--Primary-SoftRed); }
-          body .container .card .info .delete .delete-icon {
-            background-image: url("images/icon-delete.svg");
-            width: 1em;
-            height: 1em;
-            background-repeat: no-repeat;
-            margin-right: .5em; }
-        body .container .card .info .edit {
-          width: 15%;
-          color: var(--Primary-Moderblue); }
-          body .container .card .info .edit .edit-icon {
-            background-image: url("images/icon-edit.svg");
-            width: 1em;
-            height: 1em;
-            background-repeat: no-repeat;
-            margin-right: .5em; }
-        body .container .card .info .content {
+        flex-direction: column;
+        border: 1px solid black; }
+        body .container .card .info .upper {
           width: 100%;
-          height: 70%;
-          color: var(--Neutral-GBlue);
-          padding-top: .5em; }
+          display: flex;
+          border: 1px solid black; }
+          body .container .card .info .upper .user {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 30%;
+            margin-right: .5em; }
+            body .container .card .info .upper .user .user-icon {
+              background-image: url("images/avatars/image-amyrobson.png");
+              width: 2em;
+              height: 2em;
+              background-repeat: no-repeat;
+              border-radius: 50px;
+              background-position: center;
+              background-size: contain; }
+            body .container .card .info .upper .user .user-name {
+              padding-left: 1em;
+              font-weight: 500; }
+            body .container .card .info .upper .user .you {
+              background-color: var(--Primary-Moderblue);
+              color: var(--Neutral-White);
+              font-weight: 500;
+              margin-left: .5em; }
+          body .container .card .info .upper .createdAt {
+            width: auto;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            color: var(--Neutral-GBlue); }
+          body .container .card .info .upper .options {
+            border: 1px solid black;
+            width: 100%;
+            height: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-weight: 500;
+            cursor: pointer; }
+          body .container .card .info .upper .reply {
+            width: auto;
+            color: var(--Primary-Moderblue); }
+            body .container .card .info .upper .reply .reply-icon {
+              background-image: url("images/icon-reply.svg");
+              width: 1em;
+              height: 1em;
+              background-repeat: no-repeat;
+              margin-right: .5em; }
+          body .container .card .info .upper .delete {
+            width: auto;
+            color: var(--Primary-SoftRed); }
+            body .container .card .info .upper .delete .delete-icon {
+              background-image: url("images/icon-delete.svg");
+              width: 1em;
+              height: 1em;
+              background-repeat: no-repeat;
+              margin-right: .5em; }
+          body .container .card .info .upper .edit {
+            width: auto;
+            color: var(--Primary-Moderblue); }
+            body .container .card .info .upper .edit .edit-icon {
+              background-image: url("images/icon-edit.svg");
+              width: 1em;
+              height: 1em;
+              background-repeat: no-repeat;
+              margin-right: .5em; }
+        body .container .card .info .lower {
+          width: 100%; }
+          body .container .card .info .lower .content {
+            width: 100%;
+            height: 70%;
+            color: var(--Neutral-GBlue);
+            padding-top: .5em; }
     body .container .comment-details {
       background-color: var(--Neutral-White);
       border-color: var(--Neutral-VlGray);

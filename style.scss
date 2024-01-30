@@ -76,13 +76,16 @@ body{
             border: 1px solid black;
             .upper{
                width: 100%;
-               display: flex;
+               display: grid;
+               grid-template-columns: 2fr 2fr 3fr;
                border: 1px solid black;   
+               &:last-child{
+                  grid-column-end: auto;
+               }
                .user{
                   display: flex;
                   align-items: center;
                   width: auto;
-                  height: 30%;
                   margin-right: .5em;
                   .user-icon{
                      background-image: url('images/avatars/image-amyrobson.png');
@@ -106,55 +109,57 @@ body{
                }
                .createdAt{
                   width: auto;
-                  height: 30%;
                   display: flex;
                   align-items: center;
                   color: var(--Neutral-GBlue);
                }
                .options{
-                  border: 1px solid black;
-                  width: 100%;
-                  height: 35%;
+                  height: auto;
                   display: flex;
                   align-items: center;
                   justify-content: flex-end;
                   font-weight: 500;
                   cursor: pointer;
-               }
-               .reply{
-                  width:auto;
-                  color: var(--Primary-Moderblue);
-                  .reply-icon{
-                     background-image: url('images/icon-reply.svg');
-                     width: 1em;
-                     height: 1em;
-                     background-repeat: no-repeat;
-                     margin-right: .5em;
+                  .reply{
+                     width:auto;
+                     color: var(--Primary-Moderblue);
+                     display: flex;
+                     .reply-icon{
+                        background-image: url('images/icon-reply.svg');
+                        width: 1em;
+                        height: 1em;
+                        background-repeat: no-repeat;
+                        margin-right: .5em;
+                     }
+                  }
+                  .delete{
+                     width:auto;
+                     color: var(--Primary-SoftRed);
+                     display: flex;
+                     .delete-icon{
+                        background-image: url('images/icon-delete.svg');
+                        width: 1em;
+                        height: 1em;
+                        background-repeat: no-repeat;
+                        margin-right: .5em;
+                     }
+                  }
+                  .edit{
+                     width:auto;
+                     color: var(--Primary-Moderblue);
+                     display: flex;
+                     margin-left: 1em;
+                     .edit-icon{
+                        background-image: url('images/icon-edit.svg');
+                        width: 1em;
+                        height: 1em;
+                        background-repeat: no-repeat;
+                        margin-right: .5em;
+                        
+                     }
                   }
                }
-               .delete{
-                  width:auto;
-                  color: var(--Primary-SoftRed);
-                  .delete-icon{
-                     background-image: url('images/icon-delete.svg');
-                     width: 1em;
-                     height: 1em;
-                     background-repeat: no-repeat;
-                     margin-right: .5em;
-                  }
-               }
-               .edit{
-                  width:auto;
-                  color: var(--Primary-Moderblue);
-                  .edit-icon{
-                     background-image: url('images/icon-edit.svg');
-                     width: 1em;
-                     height: 1em;
-                     background-repeat: no-repeat;
-                     margin-right: .5em;
-                     
-                  }
-               }
+               
             }
             .lower{
                width: 100%;

@@ -68,13 +68,15 @@ body {
         border: 1px solid black; }
         body .container .card .info .upper {
           width: 100%;
-          display: flex;
+          display: grid;
+          grid-template-columns: 2fr 2fr 3fr;
           border: 1px solid black; }
+          body .container .card .info .upper:last-child {
+            grid-column-end: auto; }
           body .container .card .info .upper .user {
             display: flex;
             align-items: center;
             width: auto;
-            height: 30%;
             margin-right: .5em; }
             body .container .card .info .upper .user .user-icon {
               background-image: url("images/avatars/image-amyrobson.png");
@@ -94,46 +96,47 @@ body {
               margin-left: .5em; }
           body .container .card .info .upper .createdAt {
             width: auto;
-            height: 30%;
             display: flex;
             align-items: center;
             color: var(--Neutral-GBlue); }
           body .container .card .info .upper .options {
-            border: 1px solid black;
-            width: 100%;
-            height: 35%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             font-weight: 500;
             cursor: pointer; }
-          body .container .card .info .upper .reply {
-            width: auto;
-            color: var(--Primary-Moderblue); }
-            body .container .card .info .upper .reply .reply-icon {
-              background-image: url("images/icon-reply.svg");
-              width: 1em;
-              height: 1em;
-              background-repeat: no-repeat;
-              margin-right: .5em; }
-          body .container .card .info .upper .delete {
-            width: auto;
-            color: var(--Primary-SoftRed); }
-            body .container .card .info .upper .delete .delete-icon {
-              background-image: url("images/icon-delete.svg");
-              width: 1em;
-              height: 1em;
-              background-repeat: no-repeat;
-              margin-right: .5em; }
-          body .container .card .info .upper .edit {
-            width: auto;
-            color: var(--Primary-Moderblue); }
-            body .container .card .info .upper .edit .edit-icon {
-              background-image: url("images/icon-edit.svg");
-              width: 1em;
-              height: 1em;
-              background-repeat: no-repeat;
-              margin-right: .5em; }
+            body .container .card .info .upper .options .reply {
+              width: auto;
+              color: var(--Primary-Moderblue);
+              display: flex; }
+              body .container .card .info .upper .options .reply .reply-icon {
+                background-image: url("images/icon-reply.svg");
+                width: 1em;
+                height: 1em;
+                background-repeat: no-repeat;
+                margin-right: .5em; }
+            body .container .card .info .upper .options .delete {
+              width: auto;
+              color: var(--Primary-SoftRed);
+              display: flex; }
+              body .container .card .info .upper .options .delete .delete-icon {
+                background-image: url("images/icon-delete.svg");
+                width: 1em;
+                height: 1em;
+                background-repeat: no-repeat;
+                margin-right: .5em; }
+            body .container .card .info .upper .options .edit {
+              width: auto;
+              color: var(--Primary-Moderblue);
+              display: flex;
+              margin-left: 1em; }
+              body .container .card .info .upper .options .edit .edit-icon {
+                background-image: url("images/icon-edit.svg");
+                width: 1em;
+                height: 1em;
+                background-repeat: no-repeat;
+                margin-right: .5em; }
         body .container .card .info .lower {
           width: 100%; }
           body .container .card .info .lower .content {

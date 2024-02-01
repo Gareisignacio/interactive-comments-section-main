@@ -65,19 +65,22 @@ const data ={
        ]
      }
    ]
- }
+ };
+
+const container = document.querySelector('.container')
 
 
 for(let i = 0; i < data.comments.length; i++){
-   let container = document.querySelector(".container");
    let allComments = document.createElement("div");
+   container.appendChild(allComments);
+
    allComments.classList.add("all-comments")
    console.log(allComments)
 
+  // if(data.comments.r)
 
-   allComments.textContent= 'Holis';
-   
-   /*`
+   allComments.innerHTML= 
+  `
    <div class="card">
          <div class="score">
             <div class="plus-icon"></div>
@@ -105,7 +108,6 @@ for(let i = 0; i < data.comments.length; i++){
          </div>
    </div>
    `;
-   */
 
-   // container.appendChild(allComments);
+
 }

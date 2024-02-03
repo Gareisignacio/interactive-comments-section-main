@@ -73,12 +73,10 @@ body{
          .info{
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
             .upper{
                width: 100%;
                display: grid;
                grid-template-columns: 2fr 2fr 3fr;
-               border: 1px solid black;   
                &:last-child{
                   grid-column-end: auto;
                }
@@ -168,11 +166,19 @@ body{
                   height: 70%;
                   color: var(--Neutral-GBlue);
                   padding-top: .5em;
+                  .replying-to{
+                     color: var(--Primary-Moderblue);
+                     font-weight: 500;
+                  }
                }
             }
             
             
          }
+      }
+      .replies{
+         margin-left: 4.5rem;
+         width: fit-content;
       }
       .comment-details{
          background-color: var(--Neutral-White);
@@ -211,9 +217,7 @@ body{
             box-shadow: transparent;
          }
       }
-      .all-comments:not(:first-child){
-         margin-left: 4.5rem;
-      }
+      
    }
 }
 

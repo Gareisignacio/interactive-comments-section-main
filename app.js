@@ -71,17 +71,20 @@ const container = document.querySelector('.container')
 
 
 for(let i = 0; i < data.comments.length; i++){
-   let allComments = document.createElement("div");
-   container.appendChild(allComments);
+  let allComments = document.createElement("div");
+  container.appendChild(allComments);
+  allComments.classList.add("all-comments")
 
-   allComments.classList.add("all-comments")
-   console.log(allComments)
+  let card = document.createElement("div");
+  card.classList.add("card");
 
-  // if(data.comments.r)
+  let currentUser = data.currentUser.username;
 
-   allComments.innerHTML= 
+
+  if(data.comments[i].replies.length === 0){
+    allComments.appendChild(card);
+    card.innerHTML =
   `
-   <div class="card">
          <div class="score">
             <div class="plus-icon"></div>
             <p>${data.comments[i].score}</p>
@@ -106,8 +109,124 @@ for(let i = 0; i < data.comments.length; i++){
             <div class="content">${data.comments[i].content}</div>
             </div>
          </div>
-   </div>
    `;
+  } else{
+    allComments.appendChild(card);
 
+    for(let j = 0; j < data.comments[i].replies.length; j++){
+      let replyUser = data.comments[i].replies[j].user.username;
 
+      let replies = document.createElement("div");
+      replies.classList.add("card");
+      replies.classList.add("replies");
+
+      card.innerHTML =`
+          <div class="score">
+            <div class="plus-icon"></div>
+            <p>${data.comments[i].score}</p>
+            <div class="minus-icon" ></div>
+          </div>
+          <div class="info">
+            <div class="upper">
+            <div class="user">
+               <div class="user-icon" style='background-image: url(${data.comments[i].user.image.png});'
+               ></div>
+               <p class="user-name">${data.comments[i].user.username}</p>
+            </div>
+            <div class="createdAt">${data.comments[i].createdAt}</div>
+            <div class="options">
+               <div class="reply">
+                  <div class="reply-icon"></div>
+                  <p>Reply</p>
+               </div>
+            </div>
+            </div>
+            <div class="lower">
+            <div class="content">${data.comments[i].content}</div>
+            </div>
+         </div>
+    `;
+      if(currentUser === replyUser){
+        replies.innerHTML =
+    `
+              <div class="score">
+                <div class="plus-icon"></div>
+                <p>${data.comments[i].replies[j].score}</p>
+                <div class="minus-icon"></div>
+              </div>
+              <div class="info">
+                <div class="upper">
+                  <div class="user">
+                    <div class="user-icon" style='background-image: url(${data.comments[i].replies[j].user.image.png});'></div>
+                    <p class="user-name">${data.comments[i].replies[j].user.username}</p>
+                    <p class="you">you</p>
+                    </div>
+                  <div class="createdAt">${data.comments[i].replies[j].createdAt}</div>
+                  <div class="options">
+                    <div class="delete">
+                      <div class="delete-icon"></div>
+                      <p>Delete</p>
+                    </div>
+                    <div class="edit">
+                      <div class="edit-icon"></div>
+                      <p>Edit</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="lower">
+                  <div class="content">
+                  <span class='replying-to'>
+                  @
+                  ${data.comments[i].replies[j].replyingTo}</span>
+                  <span>
+                  ${data.comments[i].replies[j].content}
+                  </span>
+                  </div>
+                </div>
+              </div>`;
+      } else{
+        replies.innerHTML =
+    `
+              <div class="score">
+                <div class="plus-icon"></div>
+                <p>${data.comments[i].replies[j].score}</p>
+                <div class="minus-icon"></div>
+              </div>
+              <div class="info">
+                <div class="upper">
+                  <div class="user">
+                    <div class="user-icon" style='background-image: url(${data.comments[i].replies[j].user.image.png});'></div>
+                    <p class="user-name">${data.comments[i].replies[j].user.username}</p>
+                    <p class="you">you</p>
+                    </div>
+                  <div class="createdAt">${data.comments[i].replies[j].createdAt}</div>
+                  <div class="options">
+                    <div class="reply">
+                        <div class="reply-icon"></div>
+                        <p>Reply</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="lower">
+                  <div class="content">
+                  <span class='replying-to'>
+                  @
+                  ${data.comments[i].replies[j].replyingTo}</span>
+                  <span>
+                  ${data.comments[i].replies[j].content}
+                  </span>
+                  </div>
+                </div>
+              </div>
+    `;
+      }
+      
+      allComments.appendChild(replies);
+    }
+  }
 }
+
+let replyBtns = document.querySelectorAll('.reply');
+replyBtns.forEach

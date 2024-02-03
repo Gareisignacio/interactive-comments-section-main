@@ -64,13 +64,11 @@ body {
           cursor: pointer; }
       body .container .card .info {
         display: flex;
-        flex-direction: column;
-        border: 1px solid black; }
+        flex-direction: column; }
         body .container .card .info .upper {
           width: 100%;
           display: grid;
-          grid-template-columns: 2fr 2fr 3fr;
-          border: 1px solid black; }
+          grid-template-columns: 2fr 2fr 3fr; }
           body .container .card .info .upper:last-child {
             grid-column-end: auto; }
           body .container .card .info .upper .user {
@@ -144,6 +142,12 @@ body {
             height: 70%;
             color: var(--Neutral-GBlue);
             padding-top: .5em; }
+            body .container .card .info .lower .content .replying-to {
+              color: var(--Primary-Moderblue);
+              font-weight: 500; }
+    body .container .replies {
+      margin-left: 4.5rem;
+      width: fit-content; }
     body .container .comment-details {
       background-color: var(--Neutral-White);
       border-color: var(--Neutral-VlGray);
@@ -177,7 +181,5 @@ body {
         font-weight: 700;
         cursor: pointer;
         box-shadow: transparent; }
-    body .container .all-comments:not(:first-child) {
-      margin-left: 4.5rem; }
 
 /*# sourceMappingURL=style.css.map */
